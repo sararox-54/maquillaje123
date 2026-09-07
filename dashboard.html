@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard Relacional | Glow Studio</title>
+
+    <style>
+
+        /* =========================
+           PALETA DE COLORES
+           ========================= */
+
+        :root {
+            --rosa-oscuro: #b84f7c;
+            --rosa-medio: #d9799d;
+            --rosa-claro: #f8dce8;
+            --rosa-suave: #fff3f7;
+            --blanco: #ffffff;
+            --texto: #4a3440;
+            --borde: #e5a9c1;
+        }
+
+
+        /* =========================
+           ESTILO GENERAL
+           ========================= */
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: var(--rosa-suave);
+            color: var(--texto);
+        }
+
+
+        /* =========================
+           HEADER
+           ========================= */
+
+        header {
+            background: linear-gradient(
+                135deg,
+                var(--rosa-oscuro),
+                var(--rosa-medio)
+            );
+
+            color: var(--blanco);
+            text-align: center;
+            padding: 35px 20px;
+
+            box-shadow: 0 4px 12px rgba(184, 79, 124, 0.25);
+        }
+
+        header h1 {
+            margin: 0 0 10px;
+            font-size: 32px;
+        }
+
+        header p {
+            margin: 0;
+            font-size: 16px;
+        }
+
+
+        /* =========================
+           MAIN
+           ========================= */
+
+        main {
+            width: 90%;
+            max-width: 1100px;
+            margin: 30px auto;
+        }
+
+
+        /* =========================
+           SECCIONES
+           ========================= */
+
+        section {
+            background-color: var(--blanco);
+
+            padding: 25px;
+            margin-bottom: 25px;
+
+            border-radius: 15px;
+            border: 1px solid var(--borde);
+
+            box-shadow: 0 5px 15px rgba(184, 79, 124, 0.12);
+        }
+
+        section h2 {
+            color: var(--rosa-oscuro);
+            margin-top: 0;
+
+            border-bottom: 2px solid var(--rosa-claro);
+            padding-bottom: 10px;
+        }
+
+
+        /* =========================
+           TABLAS
+           ========================= */
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+
+        th,
+        td {
+            padding: 13px;
+            text-align: center;
+            border: 1px solid var(--borde);
+        }
+
+        thead th {
+            background-color: var(--rosa-oscuro);
+            color: var(--blanco);
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: var(--rosa-suave);
+        }
+
+        tbody tr:hover {
+            background-color: var(--rosa-claro);
+        }
+
+        tfoot td {
+            background-color: var(--rosa-claro);
+            color: var(--rosa-oscuro);
+            font-weight: bold;
+        }
+
+
+        /* =========================
+           ASIDE
+           ========================= */
+
+        aside {
+            width: 90%;
+            max-width: 1100px;
+
+            margin: 0 auto 30px;
+
+            padding: 25px;
+
+            background-color: var(--blanco);
+
+            border-left: 6px solid var(--rosa-medio);
+            border-radius: 15px;
+
+            box-shadow: 0 5px 15px rgba(184, 79, 124, 0.12);
+        }
+
+        aside h3 {
+            color: var(--rosa-oscuro);
+            margin-top: 0;
+            font-size: 23px;
+        }
+
+
+        /* =========================
+           FORMULARIO
+           ========================= */
+
+        form {
+            display: grid;
+            gap: 8px;
+        }
+
+        label {
+            margin-top: 8px;
+            font-weight: bold;
+            color: var(--texto);
+        }
+
+        input {
+            width: 100%;
+            padding: 11px;
+
+            border: 1px solid var(--borde);
+            border-radius: 8px;
+
+            background-color: var(--rosa-suave);
+            color: var(--texto);
+
+            font-size: 15px;
+        }
+
+        input:focus {
+            outline: 2px solid var(--rosa-medio);
+            background-color: var(--blanco);
+        }
+
+
+        /* =========================
+           BOTÓN
+           ========================= */
+
+        button {
+            margin-top: 15px;
+
+            padding: 12px 20px;
+
+            border: none;
+            border-radius: 8px;
+
+            background-color: var(--rosa-oscuro);
+            color: var(--blanco);
+
+            font-size: 16px;
+            font-weight: bold;
+
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: var(--rosa-medio);
+        }
+
+
+        /* =========================
+           FOOTER
+           ========================= */
+
+        footer {
+            background-color: var(--rosa-oscuro);
+
+            color: var(--blanco);
+
+            text-align: center;
+
+            padding: 18px;
+
+            margin-top: 30px;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+
+        /* =========================
+           RESPONSIVE
+           ========================= */
+
+        @media (max-width: 700px) {
+
+            main,
+            aside {
+                width: 95%;
+            }
+
+            section {
+                padding: 15px;
+            }
+
+            table {
+                font-size: 13px;
+            }
+
+            th,
+            td {
+                padding: 8px;
+            }
+
+            header h1 {
+                font-size: 25px;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+    <!-- ENCABEZADO -->
+    <header>
+        <h1>🌸 Dashboard Relacional</h1>
+        <p>Control e inventario de productos de Glow Studio</p>
+    </header>
+
+
+    <main>
+
+        <!-- =========================
+             SECCIÓN 1
+             ========================= -->
+
+        <section id="inventario">
+
+            <h2>Inventario de Productos</h2>
+
+            <table>
+
+                <colgroup>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                </colgroup>
+
+
+                <thead>
+
+                    <tr>
+                        <th colspan="4">
+                            Catálogo General de Glow Studio
+                        </th>
+                    </tr>
+
+                    <tr>
+                        <th>Producto</th>
+                        <th>Categoría</th>
+                        <th>Precio</th>
+                        <th>Cantidad</th>
+                    </tr>
+
+                </thead>
+
+
+                <tbody>
+
+                    <tr id="item-001">
+
+                        <td rowspan="2">
+                            Base de Maquillaje
+                        </td>
+
+                        <td>Rostro</td>
+
+                        <td>$45.000</td>
+
+                        <td>15</td>
+
+                    </tr>
+
+
+                    <tr id="item-002">
+
+                        <td>Rostro</td>
+
+                        <td>$32.000</td>
+
+                        <td>20</td>
+
+                    </tr>
+
+
+                    <tr id="item-003">
+
+                        <td>
+                            Rubor
+                        </td>
+
+                        <td rowspan="2">
+                            Color
+                        </td>
+
+                        <td>$28.000</td>
+
+                        <td>25</td>
+
+                    </tr>
+
+
+                    <tr id="item-004">
+
+                        <td>
+                            Iluminador
+                        </td>
+
+                        <td>$35.000</td>
+
+                        <td>15</td>
+
+                    </tr>
+
+                </tbody>
+
+
+                <tfoot>
+
+                    <tr>
+
+                        <td colspan="3">
+                            Total de productos
+                        </td>
+
+                        <td>
+                            75
+                        </td>
+
+                    </tr>
+
+                </tfoot>
+
+            </table>
+
+        </section>
+
+
+        <!-- =========================
+             SECCIÓN 2
+             ========================= -->
+
+        <section id="categorias">
+
+            <h2>Categorías de Productos</h2>
+
+            <table>
+
+                <colgroup>
+                    <col>
+                    <col>
+                </colgroup>
+
+
+                <thead>
+
+                    <tr>
+
+                        <th colspan="2">
+                            Clasificación de Glow Studio
+                        </th>
+
+                    </tr>
+
+                </thead>
+
+
+                <tbody>
+
+                    <tr>
+
+                        <td>
+                            Rostro
+                        </td>
+
+                        <td>
+                            Bases y productos para el rostro
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>
+                            Color
+                        </td>
+
+                        <td>
+                            Rubores e iluminadores
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+
+                <tfoot>
+
+                    <tr>
+
+                        <td colspan="2">
+                            Información del catálogo
+                        </td>
+
+                    </tr>
+
+                </tfoot>
+
+            </table>
+
+        </section>
+
+
+        <!-- =========================
+             SECCIÓN 3
+             ========================= -->
+
+        <section id="resumen">
+
+            <h2>Resumen del Inventario</h2>
+
+            <p>
+                Glow Studio cuenta con diferentes productos de
+                maquillaje organizados por categorías.
+            </p>
+
+            <p>
+                La información de los productos se encuentra
+                relacionada mediante los identificadores de las
+                filas de la tabla.
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         FORMULARIO COMPLEMENTARIO
+         ========================= -->
+
+    <aside>
+
+        <h3>🌷 Solicitar Producto</h3>
+
+        <form action="/pedido">
+
+
+            <label for="req-001">
+                Cantidad de Base (ID: item-001):
+            </label>
+
+            <input
+                type="number"
+                id="req-001"
+                name="cantidad_base"
+                min="1"
+                tabindex="2"
+            >
+
+
+            <label for="req-002">
+                Cantidad de Producto (ID: item-002):
+            </label>
+
+            <input
+                type="number"
+                id="req-002"
+                name="cantidad_producto"
+                min="1"
+                tabindex="1"
+            >
+
+
+            <label for="req-003">
+                Cantidad de Rubor (ID: item-003):
+            </label>
+
+            <input
+                type="number"
+                id="req-003"
+                name="cantidad_rubor"
+                min="1"
+                tabindex="3"
+            >
+
+
+            <button type="submit" tabindex="4">
+                Solicitar producto
+            </button>
+
+        </form>
+
+    </aside>
+
+
+    <!-- PIE DE PÁGINA -->
+
+    <footer>
+
+        <p>
+            🌸 Glow Studio | Dashboard Relacional
+        </p>
+
+    </footer>
+
+</body>
+
+</html>
