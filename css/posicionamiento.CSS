@@ -1,0 +1,356 @@
+/* ==============================
+   ENCABEZADO
+   ============================== */
+
+header {
+    position: relative;
+    background-color: #f8c8d8;
+    padding: 15px 30px;
+    border-bottom: 4px solid #d4af37;
+    height: 90px;
+}
+
+
+.logo-wrap {
+    position: relative;
+    float: left;
+    width: 180px;
+}
+
+.logo-wrap img {
+    width: 150px;
+    height: auto;
+}
+
+
+/* INSIGNIA */
+
+.insignia {
+    position: absolute;
+    top: -8px;
+    right: 5px;
+
+    background-color: #934952;
+    color: white;
+
+    padding: 5px 10px;
+    border-radius: 20px;
+
+    font-size: 12px;
+    font-weight: bold;
+
+    border: 2px solid #d4af37;
+}
+
+
+/* ==============================
+   MENÚ EN EL CENTRO
+   ============================== */
+
+/* NAV CENTRADO Y MÁS PEQUEÑO */
+nav {
+    background-color: #E8A0A8;
+    width: fit-content;                 /* se ajusta al contenido */
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);   /* centrado horizontal y vertical */
+
+    border-radius: 15px;
+    padding: 6px 15px;
+
+    text-align: center;
+}
+
+
+/* LISTA */
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    line-height: normal;
+}
+
+nav li {
+    margin: 0 5px;
+}
+
+
+/* ENLACES DEL MENÚ */
+
+nav a {
+    display: block;
+    width: auto;
+
+    margin: 0;                      /* quita el margen de la regla general "a" */
+    padding: 8px 14px;
+
+    background-color: transparent;  /* quita el fondo rosado oscuro */
+    border: none;                   /* quita el borde dorado */
+    border-radius: 20px;
+
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+/* EFECTO */
+
+nav a:hover {
+    background-color: #f8c8d8;
+    color: #E8A0A8;
+}
+
+
+/* ==============================
+   CERRAR SESIÓN A LA DERECHA
+   ============================== */
+
+.sesion {
+    float: right;
+    margin-top: 15px;
+}
+
+
+.sesion a {
+    background-color: #d4af37;
+    color: white;
+
+    text-decoration: none;
+
+    padding: 11px 18px;
+
+    border-radius: 25px;
+
+    font-weight: bold;
+}
+
+
+.sesion a:hover {
+    background-color: #E8A0A8;
+}
+
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #FFF0F5;
+    color: #E8A0A8;
+}
+
+
+/* ==============================
+   ENCABEZADOS
+   ============================== */
+
+h2 {
+    color: #C75B7A;
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+h3 {
+    color: #C75B7A;
+    font-size: 22px;
+}
+
+
+/* ==============================
+   CONTENIDO PRINCIPAL
+   ============================== */
+
+main {
+    width: 90%;
+    max-width: 1100px;
+    margin: 30px auto;
+}
+
+
+/* ==============================
+   SECCIONES
+   ============================== */
+
+section {
+    background-color: #FFFFFF;
+    margin-bottom: 25px;
+    padding: 25px;
+    border-radius: 15px;
+    border: 2px solid #F8C8D8;
+    box-shadow: 0 4px 10px rgba(199, 91, 122, 0.15);
+}
+
+section p {
+    line-height: 1.6;
+    text-align: center;
+}
+
+
+/* ==============================
+   LISTAS
+   ============================== */
+
+ul,
+ol {
+    line-height: 2;
+    padding-left: 30px;
+}
+
+li::marker {
+    color: #C75B7A;
+    font-weight: bold;
+}
+
+
+/* ==============================
+   SERVICIOS EN 2 COLUMNAS
+   izquierda: 1 y 2  |  derecha: 3 y 4
+   ============================== */
+
+#servicios ol {
+    display: grid;
+    grid-template-columns: 1fr 1fr;     /* 2 columnas: izquierda y derecha */
+    grid-template-rows: repeat(2, auto);/* 2 filas: arriba y abajo */
+    grid-auto-flow: column;             /* llena primero la columna izquierda, luego la derecha */
+    column-gap: 40px;
+    row-gap: 10px;
+    max-width: 800px;
+    margin: 20px auto 0;
+    padding-left: 30px;
+}
+
+
+/* ==============================
+   GALERÍA DE PRODUCTOS
+   3 imágenes arriba y 3 abajo
+   ============================== */
+
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);   /* 3 columnas = 3 arriba y 3 abajo */
+    gap: 15px;                               /* espacio entre imágenes (más pequeño = más juntas) */
+    max-width: 650px;                        /* controla el tamaño total de la galería */
+    margin: 20px auto 0;
+}
+
+.producto {
+    text-align: center;
+}
+
+.producto img {
+    display: block;
+    width: 100%;
+    height: 180px;                           /* alto de cada imagen */
+    object-fit: cover;                       /* recorta sin deformar */
+    border-radius: 12px;
+    border: 2px solid #F8C8D8;
+}
+
+.producto p {
+    margin: 8px 0 0;
+    font-weight: bold;
+    color: #C75B7A;
+}
+
+
+/* ==============================
+   CATEGORÍAS
+   ============================== */
+
+.categoria {
+    display: inline-block;
+    vertical-align: top;
+    width: 29%;
+    min-height: 150px;
+    margin: 1%;
+    padding: 15px;
+    background-color: #F8C8D8;
+    border: 2px solid #D4AF37;
+    border-radius: 15px;
+    box-sizing: border-box;
+}
+
+.categoria h3 {
+    text-align: center;
+}
+
+.categoria p {
+    font-size: 15px;
+}
+
+/* Centra los 3 recuadros dentro de la sección */
+#categorias {
+    text-align: center;
+}
+
+/* IMAGEN DENTRO DEL RECUADRO */
+.categoria img {
+    display: block;
+    width: 100%;              /* nunca más ancha que el recuadro */
+    height: 200px;            /* alto igual para todas */
+    object-fit: cover;        /* recorta sin deformar */
+    border-radius: 10px;
+    margin-top: 12px;
+}
+
+
+/* ==============================
+   ENLACE DE CONTACTO
+   ============================== */
+
+a {
+    display: block;
+    width: fit-content;
+    margin: 20px auto 5px;
+    padding: 12px 25px;
+    background-color: #e883a0;
+    color: #FFFFFF;
+    text-decoration: none;
+    border-radius: 25px;
+    border: 2px solid #D4AF37;
+    font-weight: bold;
+}
+
+a:hover {
+    background-color: #D4AF37;
+    color: #FFFFFF;
+}
+
+
+/* ==============================
+   FOOTER
+   ============================== */
+
+footer {
+    background-color: #ea809e;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 20px;
+    border-top: 4px solid #D4AF37;
+}
+
+footer p {
+    margin: 8px;
+}
+
+
+/* ==============================
+   CELULAR: 2 columnas
+   ============================== */
+
+@media (max-width: 600px) {
+    .galeria {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #servicios ol {
+        grid-template-columns: 1fr;
+        grid-template-rows: none;
+        grid-auto-flow: row;
+    }
+}
