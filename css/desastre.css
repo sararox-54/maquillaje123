@@ -1,0 +1,140 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  color: #333;
+  line-height: 1.5;
+}
+
+/* ===== CABECERA ===== */
+.cabecera {
+  background-color: #7a4a2b;
+  color: #fff;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;        
+}
+
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.menu-nav {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%); 
+
+}
+
+.menu-nav ul {
+  display: flex;             
+  list-style: none;
+  align-items: center;
+}
+
+
+.menu-nav li {
+  padding: 10px;
+  text-align: center;
+  margin: 0 5px;
+}
+
+.menu-nav a:hover {
+    color: #f5c98b;
+
+  
+}
+
+.menu-nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* ===== HERO ===== */
+.hero {
+  background-color: #f4e8d8;
+  padding: 60px 30px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+/* ===== PRODUCTOS ===== */
+.productos {
+  padding: 40px 30px;
+}
+
+.productos h2 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.lista-productos {
+  text-align: center;
+}
+
+.producto-card {
+  width: 220px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  display: inline-block;
+  margin: 0 10px 20px;
+  text-align: left;
+  vertical-align: top;
+}
+
+.producto-card img {
+  width: 100%;
+  border-radius: 4px;
+}
+
+.producto-card h3 {
+  margin-top: 10px;
+}
+
+.etiqueta-oferta {
+  position: relative;
+  top: 0;
+  right: 0;
+  background-color: #d9534f;
+  color: #fff;
+  font-size: 0.75rem;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.etiqueta-nuevo {
+  position: relative;
+  top: 0;
+  right: 0;
+  background-color: #5cb85c;
+  color: #ffffff;
+  font-size: 0.75rem;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+/* ===== NOSOTROS ===== */
+.nosotros {
+  background-color: #fafafa;
+  padding: 40px 30px;
+}
+
+/* ===== PIE ===== */
+.pie {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 15px;
+}
