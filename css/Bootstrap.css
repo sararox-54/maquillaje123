@@ -1,0 +1,106 @@
+/* ===== ESTILOS GENERALES ===== */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff8fb;
+    color: #4a2632;
+}
+
+
+/* ===== ENCABEZADO ===== */
+
+header {
+    background-color: #f8c8d8;
+    border-bottom: 4px solid #d4af37;
+}
+
+header h1 {
+    color: #9b3d61;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+header p {
+    color: #6d3a4b;
+}
+
+
+/* ===== MENÚ ===== */
+
+.navbar {
+    background-color: white !important;
+    border-bottom: 2px solid #f0b6c9;
+}
+
+.navbar-brand {
+    color: #9b3d61 !important;
+    font-weight: bold;
+}
+
+.nav-link {
+    color: #6d3a4b !important;
+    margin: 0 8px;
+}
+
+.nav-link:hover {
+    color: #c75b7a !important;
+}
+
+
+/* ===== TÍTULOS ===== */
+
+h2 {
+    color: #9b3d61;
+    font-weight: bold;
+}
+
+
+/* ===== PRODUCTOS ===== */
+
+.card {
+    border: 2px solid #f0b6c9;
+    border-radius: 15px;
+    background-color: white;
+    padding: 5px;
+}
+
+.card-title {
+    color: #9b3d61;
+    font-weight: bold;
+}
+
+.card-text {
+    color: #6d3a4b;
+}
+
+
+/* ===== BOTONES ===== */
+
+.btn-primary {
+    background-color: #c75b7a;
+    border-color: #c75b7a;
+}
+
+.btn-primary:hover {
+    background-color: #9b3d61;
+    border-color: #9b3d61;
+}
+
+
+/* ===== SERVICIOS Y CONTACTO ===== */
+
+#servicios,
+#contacto {
+    background-color: #fde8ef;
+    padding: 30px;
+    border-radius: 15px;
+}
+
+
+/* ===== PIE DE PÁGINA ===== */
+
+footer {
+    background-color: #9b3d61;
+    color: white;
+    margin-top: 40px;
+}
