@@ -1,0 +1,107 @@
+/* ===== ESTILOS GENERALES ===== */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff5f9;
+    color: #6b2945;
+}
+
+
+/* ===== MENÚ ===== */
+
+.navbar {
+    background-color: #f8c4d9 !important;
+}
+
+.navbar-brand {
+    color: #a8325d !important;
+    font-weight: bold;
+}
+
+.nav-link {
+    color: #7d3450 !important;
+}
+
+.nav-link:hover {
+    color: #c94f7c !important;
+}
+
+
+/* ===== HERO ===== */
+
+#inicio {
+    background-color: #fde1eb;
+}
+
+#inicio h1 {
+    color: #a8325d;
+    font-weight: bold;
+    font-size: 40px;
+}
+
+#inicio p {
+    color: #7d3450;
+}
+
+
+/* ===== BOTONES ===== */
+
+.btn-primary {
+    background-color: #d95782;
+    border-color: #d95782;
+}
+
+.btn-primary:hover {
+    background-color: #a8325d;
+    border-color: #a8325d;
+}
+
+
+/* ===== PRODUCTOS ===== */
+
+#servicios {
+    background-color: #fff5f9;
+}
+
+#servicios h2 {
+    color: #a8325d;
+    font-weight: bold;
+}
+
+.card {
+    border: 2px solid #f2b6cb;
+    border-radius: 15px;
+    background-color: white;
+}
+
+.card-title {
+    color: #c43f70;
+    font-weight: bold;
+}
+
+.card-text {
+    color: #7d3450;
+}
+
+
+/* ===== CONTACTO ===== */
+
+#contacto {
+    background-color: #fbd3e2;
+}
+
+#contacto h2 {
+    color: #a8325d;
+    font-weight: bold;
+}
+
+#contacto p {
+    color: #7d3450;
+}
+
+
+/* ===== FOOTER ===== */
+
+footer {
+    background-color: #8f3156 !important;
+}
